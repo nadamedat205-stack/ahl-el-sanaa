@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>أهل الصنعة | التخصصات</title>
+
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Lenis Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="category-header">
+    <a href="index.html" class="logo">
+        <i class="fas fa-screwdriver-wrench"></i>
+        <span>أهل الصنعة</span>
+    </a>
+
+    <a href="index.html" class="back-home">
+        <i class="fas fa-arrow-right"></i>
+        <span>العودة للرئيسية</span>
+    </a>
+</header>
+
+<main class="category-page">
+
+    <div class="category-intro">
+        <span class="category-label" id="categoryLabel">
+            التخصصات
+        </span>
+
+        <h1 id="categoryTitle">اشراف هندسى</h1>
+
+        <p id="categoryDescription">
+            اختاري الشخص المناسب لمشروعك
+        </p>
+    </div>
+
+    <section class="engineers-section">
+
+        <div class="engineers-heading">
+            <h2 id="peopleTitle">الأشخاص المتاحين</h2>
+            <span id="peopleCount"></span>
+        </div>
+
+        <div class="engineers-grid" id="engineersGrid">
+        </div>
+
+    </section>
+
+</main>
+
+<!-- Lenis Smooth Scroll JS -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+
+<!-- Main Script -->
+<script src="script.js"></script>
+
+<script>
+    // إذا تم فتح الصفحة محلياً عبر mage.html، اجعل روابط العودة ترجع لـ mage.html بسلاسة
+    if (window.location.protocol === 'file:' && window.location.pathname.includes('category.html')) {
+        document.querySelectorAll('a[href="index.html"]').forEach(a => {
+            a.setAttribute('href', 'mage.html');
+        });
+    }
+</script>
+</body>
+</html>
